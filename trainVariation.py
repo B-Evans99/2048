@@ -70,7 +70,7 @@ population_vectors = pygad.gann.population_as_vectors(
 initial_population = population_vectors.copy()
 
 num_parents_mating = 25
-num_generations = 10000
+num_generations = 10
 mutation_percent_genes = 8
 parent_selection_type = "sss"
 crossover_type = "single_point"

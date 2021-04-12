@@ -4,6 +4,7 @@ from random import choice
 import numpy
 import csv
 import pygad
+import sys
 
 # the load function fails if it cannot find it's fitness or callback function, so empty functions are included here
 
@@ -20,7 +21,7 @@ def callback_generation(ga_instance):
     return None
 
 
-loaded_ga_instance = pygad.load(filename='control')
+loaded_ga_instance = pygad.load(filename=sys.argv[1].split(".")[0])
 graph = loaded_ga_instance.best_solutions_fitness
 with open('control.csv', 'w', newline='') as file:
     writer = csv.writer(file)
